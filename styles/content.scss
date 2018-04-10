@@ -1,5 +1,6 @@
 body {
     font-family: 'Work Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 .logo-tsb {
@@ -55,7 +56,7 @@ svg:hover polygon {
 
 #canvas {
     background: $color-tertiary;
-    height: 100px;
+    height: 10px;
     opacity: 0.1;
     max-width: 100%;
 }
@@ -172,6 +173,10 @@ svg:hover polygon {
             }
         }        
     }
+}
+
+.project-desc-author {
+    width: 250px;
 }
 
 .profile-wrapper {
@@ -313,6 +318,10 @@ svg:hover polygon {
             flex-direction: column;
             margin-top: 2rem;
 
+            .project-desc-author {
+                padding-top: 0.5rem;
+            }
+
             .project-desc-title {
                 font-size: $font-size-l;
                 color: $color-primary;
@@ -326,7 +335,7 @@ svg:hover polygon {
     color: $color-primary;
     transition: color $transition-short;
     text-decoration: none;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
     border-bottom: 2px solid;
 
     &:hover {
@@ -442,7 +451,7 @@ p.copy {
     .section {
         max-width: 64rem;
         width: 85%;
-        background: yellow;
+        // background: yellow;
     }
 
     .schedule-event-block {
@@ -509,6 +518,49 @@ p.copy {
         width: 80%;
     }
 
+    .schedule-wrapper {
+        .schedule-event {
+            .pb-1 {
+                padding-bottom: 2rem;
+            }
+            .pt-1 {
+                padding-top: 2rem;
+            }
+            .schedule-date {
+                .headline-02 {
+                    font-size: $font-size-m;
+                    color: $color-black;
+                }
+                .headline-03 {
+                    font-size: $font-size-m;
+                }
+                text-align: left;
+                width: 60%;
+                transform: translateX(0px);
+            }
+            .schedule-event-block {
+                flex-wrap: wrap;
+                .schedule-time {
+                    width: 25%;
+                    margin-right: 0;
+                    padding-top: 0rem;
+                    color: $color-black;
+                    text-align: right;
+                }
+
+                .schedule-desc-wrapper {
+                    padding-top: 0.5rem;
+                }
+            }
+        }
+    }
+
+    .links {
+        left: 0;
+        position: relative;
+        margin-top: 4rem;
+    }
+
     .projects-wrapper {
         display: block;
         .project {
@@ -526,8 +578,6 @@ p.copy {
 
     .tile-wrapper {
         .tile {
-
-
             .tile-arrow-short {
                 display: none;
             }
@@ -548,18 +598,58 @@ p.copy {
 @media screen and (min-width: 0rem) and (max-width: 28rem) {
     .section {
         // background: #F0E2FD;
-        margin-left: 20px;
+        width: 90%;
+    }
+
+    p.copy {
+        line-height: $line-height-l;
     }
 
     .schedule-wrapper {
         .schedule-event {
+            .pb-1 {
+                padding-bottom: 2rem;
+            }
+            .pt-1 {
+                padding-top: 2rem;
+            }
+            .schedule-date {
+                .headline-02 {
+                    font-size: $font-size-m;
+                    color: $color-black;
+                }
+                .headline-03 {
+                    font-size: $font-size-m;
+                }
+                text-align: left;
+                width: 40%;
+                transform: translateX(0px);
+            }
             .schedule-event-block {
                 flex-wrap: wrap;
                 .schedule-time {
-                    margin-right: 1rem;
+                    width: 40%;
+                    margin-right: 0;
+                    padding-top: 0rem;
+                    color: $color-black;
+                    text-align: right;
+                }
+
+                .schedule-desc-wrapper {
+                    padding-top: 0.5rem;
                 }
             }
         }
+    }
+
+    .links {
+        left: 0;
+        position: relative;
+        margin-top: 4rem;
+    }
+
+    .conditional-break-2 {
+        display: none;
     }
 
     .headline-01 {
@@ -574,8 +664,13 @@ p.copy {
         font-size: $font-size-l-3;
     }
 
+    .headline-04 {
+        line-height: $line-height-l;
+        color: $color-black;
+    }
+
     .schedule-event-block {
-        width: 80%;
+        width: 90%;
         .schedule-date {
             transform: translateX(-10px);
         }
@@ -590,8 +685,15 @@ p.copy {
     }
 
     .bullets-wrapper {
+        .bullet {
+            transform: translateX(25px);
+            width: 90%;
+            line-height: $line-height-l;
+            color: $color-black;
+        }
+
         .bullet:before {
-            transform: translateX(-21px) translateY(5px);
+            transform: translateX(-25px) translateY(5px);
         }
     }
 
@@ -646,12 +748,16 @@ p.copy {
             .tile-arrow-short {
                 display: none;
             }
-
             .tile-headline-wrapper {
+                .process-headline {
+                    // transform: translateX(25px);
+                }
                 .process-step {
                     letter-spacing: -4px;
                     font-size: $font-size-l;
-                    transform: translateY(40px) translateX(-20px);
+                    transform: translateY(0px);
+                    position: inherit;
+                    display: block;
                 }
             }
 
