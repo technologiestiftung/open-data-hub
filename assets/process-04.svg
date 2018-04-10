@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="98px" height="107px" viewBox="0 0 98 107" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49.2 (51160) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 6</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="70.8685609" cy="49.5551052" r="25.550295"></circle>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Open-Data" transform="translate(-532.000000, -3380.000000)">
+            <g id="Group-6" transform="translate(532.000000, 3380.000000)">
+                <rect id="Rectangle-12" fill="#213A8F" x="0.261399592" y="0.522852234" width="71.4" height="88.659375" rx="5.6"></rect>
+                <rect id="Rectangle-12-Copy-8" fill-opacity="0.2" fill="#213A8F" x="6.57000732" y="5.45230576" width="69.6705697" height="88.659375" rx="5.6"></rect>
+                <text id="1011-0111-1011-0111" font-family="SpaceMono-Bold, Space Mono" font-size="8.4" font-weight="bold" line-spacing="16.8" letter-spacing="0.140000002" fill="#FFFFFF">
+                    <tspan x="12.3951134" y="20.3706686">1011 0111 </tspan>
+                    <tspan x="12.3951134" y="37.1706686">1011 0111 </tspan>
+                    <tspan x="12.3951134" y="53.9706686">0010 1001</tspan>
+                    <tspan x="12.3951134" y="70.7706686">1011 0111 </tspan>
+                </text>
+                <g id="Group-2" transform="translate(51.617780, 69.849289)">
+                    <polyline id="Path-3" stroke="#213A8F" stroke-width="2.8" fill="#FFFFFF" points="30.6914062 1.62226562 37.0898437 33.9617187 17.5527344 21.2919922 0.16484375 33.9617187 4.534375 1.62226562"></polyline>
+                    <path d="M3.50201488,4.40784686 C3.50201488,5.48686518 6.68204554,9.57187895 17.8821372,9.57187895 C23.4213942,9.57187895 28.1793276,8.4191693 32.1559375,6.11375 L30.5798438,2.40302083 L22.1357292,5.48686518 L12.9839583,4.40784686 L7.49333333,2.40302083 L5.06739583,0.595052083 C4.02380853,-0.449444419 3.50201488,0.821487172 3.50201488,4.40784686 Z" id="Path-4" fill-opacity="0.25" fill="#122BE1"></path>
+                </g>
+                <g id="Oval-2-Copy">
+                    <use fill="#213A8F" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    <circle stroke="#FFFFFF" stroke-width="4.2" cx="70.8685609" cy="49.5551052" r="23.450295"></circle>
+                    <use stroke="#213A8F" stroke-width="2.8" xlink:href="#path-1"></use>
+                </g>
+                <polyline id="Path-2" stroke="#FFFFFF" stroke-width="4.2" stroke-linecap="round" transform="translate(70.868561, 46.755105) rotate(-315.000000) translate(-70.868561, -46.755105) " points="66.5726174 54.6594237 75.1645045 54.6594237 75.1645045 38.8507866"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
