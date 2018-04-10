@@ -1,8 +1,29 @@
+<!-- 
+	
+- Benjamin 2. Ansprechpartner
+- Logo Berlin & Ibb in Echtfarben
+- Visuelle Klammer zur Technologiestiftung
+- Fixed Navigation
+- add viewBox to parsed index.html
+
+-->
+
+
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-<body>
 <script src="./index.js"></script>
+<body>
+	<div class="section">
+		<div class="navbar mt-2">
+			<a class="nav-item" href="#opendata" onclick="test('opendata');">Open Data</a>
+			<a class="nav-item" href="#process">Prozess</a>
+			<a href="#schedule" class="nav-item">Termine</a>
+			<a class="nav-item" href="#projects">Projekte</a>
+			<a class="nav-item" href="#contact">Kontakt</a>
+		</div>
+	</div>
+
 	<div class="section-wrapper intro">
 		<div class="logo-tsb"></div>
 		<div class="section">
@@ -18,7 +39,7 @@
 		</div>
 	</div>
 
-	<div class="section pb-12">
+	<div class="section pb-12" id="opendata">
 		<h2 class="headline-02 pt-12 mb-4">
 			Open Data ist der Schlüssel
 			<br class="conditional-break"/>
@@ -45,7 +66,7 @@
 		</span>
 	</div>
 
-	<div class="section-wrapper light">
+	<div class="section-wrapper light" id="process">
 		<div class="section pt-12 pb-12">
 			<h2 class="headline-02 mb-4">
 				Sie haben die Daten,
@@ -145,7 +166,7 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper white">
+	<div class="section-wrapper white" id="schedule">
 		<div class="section pt-12 pb-12">
 			<h2 class="headline-02 mb-4">
 				Unsere Veranstaltungen
@@ -216,7 +237,7 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper light">
+	<div class="section-wrapper light" id="projects">
 		<div class="section pt-12 pb-12">
 			<h2 class="headline-02 mb-4">
 				Was kann man mit Open Data machen?
@@ -226,14 +247,14 @@
 
 			<div class="projects-wrapper">
 					<div class="project mr-3">
-						<div class="project-image proj-01"></div>
+						<div class="project-image proj-02"></div>
 						<div class="project-desc-wrapper">
 							<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche</a></span>
 							<span class="project-desc-author">Technologiestiftung Berlin</span>
 						</div>
 					</div>
 					<div class="project mr-3">
-						<div class="project-image proj-02"></div>
+						<div class="project-image proj-01"></div>
 						<div class="project-desc-wrapper">
 							<span class="project-desc-title"><a class="cross-link" href="https://offenerhaushalt.de/">Offener Haushalt</a></span>
 							<span class="project-desc-author">Open Knowledge Foundation Deutschland</span>
@@ -258,7 +279,7 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper">
+	<div class="section-wrapper" id="contact">
 		<div class="section pt-12 pb-12">
 			<h2 class="headline-02 inverted mb-4">
 				Sie brauchen Unterstützung mit Open Data
@@ -270,14 +291,28 @@
 				So erreichen Sie uns:
 			</h3>
 
-			<div class="profile-wrapper mt-2">
-				<div class="profile-image"></div>
-				<div class="profile-desc-wrapper">
-					<span>Victoria Dykes</span>
-					<span>Dykes@technologiestiftung-berlin.de</span>
-					<span>030 209 69 99 41</span>
+			<div class="profiles-wrapper">
+
+				<div class="profile-wrapper mt-2">
+					<div class="profile-image"></div>
+					<div class="profile-desc-wrapper">
+						<span>Victoria Dykes</span>
+						<span>Dykes@technologiestiftung-berlin.de</span>
+						<span>030 209 69 99 41</span>
+					</div>
 				</div>
+	
+				<div class="profile-wrapper mt-2">
+					<div class="profile-image-2"></div>
+					<div class="profile-desc-wrapper">
+						<span>Benjamin Seibel</span>
+						<span>Seibel@technologiestiftung-berlin.de</span>
+						<span>030 209 69 99 41</span>
+					</div>
+				</div>
+
 			</div>
+
 		</div>
 	</div>
 
