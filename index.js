@@ -1,32 +1,38 @@
-let color = false;
+'use strict';
 
-const setColorNav = () => {
-    const s_openData_yPos = document.getElementById('s_openData').getBoundingClientRect().y -40;
-    const s_process_yPos = document.getElementById('s_process').getBoundingClientRect().y -40;
-    const s_contact_yPos = document.getElementById('s_contact').getBoundingClientRect().y -40;
-    let scrollY = window.scrollY;
-    const navbar = document.querySelector('.navbar');
+var color = false;
 
-    if (s_openData_yPos <= 0 && s_process_yPos > 0 && color == false) {
-        navbar.classList.toggle('primary');
-        color = true;
-    } else if (s_contact_yPos <= 0 && color == true) {
+var setColorNav = function setColorNav() {
+    var section_01 = document.getElementById('s_openData').getBoundingClientRect().y - 40;
+    var section_02 = document.getElementById('s_process').getBoundingClientRect().y - 40;
+    var section_03 = document.getElementById('s_schedule').getBoundingClientRect().y - 40;
+    var section_04 = document.getElementById('s_projects').getBoundingClientRect().y - 40;
+    var scrollY = window.scrollY;
+    var navbar = document.querySelector('.navbar');
+
+    if (section_01 >= 0 && color == true) {
         navbar.classList.toggle('primary');
         color = false;
-    } else if (s_openData_yPos >= 0 && color == true) {
-        navbar.classList.toggle('primary');
-        color = false;
-    } else if (s_contact_yPos >= 0 && s_openData_yPos <= 0 && color == false) {
+    } else if (section_01 <= 0 && section_02 > 0 && color == false) {
         navbar.classList.toggle('primary');
         color = true;
+    } else if (section_02 <= 0 && section_03 > 0 && color == true) {
+        navbar.classList.toggle('primary');
+        color = false;
+    } else if (section_03 <= 0 && section_04 > 0 && color == false) {
+        navbar.classList.toggle('primary');
+        color = true;
+    } else if (section_04 <= 0 && color == true) {
+        navbar.classList.toggle('primary');
+        color = false;
     }
-}
+};
 
 function moveTo(id) {
-    const element = document.getElementById(id);
-    element.scrollIntoView({ behavior: 'smooth', block: 'start'});
+    var element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
 
-document.addEventListener('scroll', () => { 
+document.addEventListener('scroll', function () {
     setColorNav();
-})
+});
