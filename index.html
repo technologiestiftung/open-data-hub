@@ -9,18 +9,20 @@
 -->
 
 
+<!DOCTYPE html>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, maximum-scale=1.0, user-scalable=no" />
-<script src="./index.js"></script>
+<link rel="stylesheet" href="root.css">
+
 <body>
 	<div class="section">
 		<div class="navbar mt-2">
-			<a class="nav-item" href="#opendata" onclick="test('opendata');">Open Data</a>
-			<a class="nav-item" href="#process">Prozess</a>
-			<a href="#schedule" class="nav-item">Termine</a>
-			<a class="nav-item" href="#projects">Projekte</a>
-			<a class="nav-item" href="#contact">Kontakt</a>
+			<a class="nav-item" onclick="moveTo('s_openData');">Open Data</a>
+			<a class="nav-item" onclick="moveTo('s_process');">Prozess</a>
+			<a class="nav-item" onclick="moveTo('s_schedule');">Termine</a>
+			<a class="nav-item" onclick="moveTo('s_projects');">Projekte</a>
+			<a class="nav-item" onclick="moveTo('s_contact');">Kontakt</a>
 		</div>
 	</div>
 
@@ -32,14 +34,14 @@
 				ein offenes Berlin
 			</h1>
 			<div id="canvas" class="mb-4"></div>
-			<h3 class="headline-03 inverted">
+			<h3 class="headline-03 white">
 				Sie haben die Daten. Wir haben die Antworten: <br class="conditional-break"/>
 				gemeinsam mit Ihnen optimieren wir Daten & Prozesse
 			</h3>
 		</div>
 	</div>
 
-	<div class="section pb-12" id="opendata">
+	<div class="section pb-12" id="s_openData">
 		<h2 class="headline-02 pt-12 mb-4">
 			Open Data ist der Schlüssel
 			<br class="conditional-break"/>
@@ -66,33 +68,33 @@
 		</span>
 	</div>
 
-	<div class="section-wrapper light" id="process">
+	<div class="section-wrapper light" id="s_process">
 		<div class="section pt-12 pb-12">
-			<h2 class="headline-02 mb-4">
+			<h2 class="headline-02 white mb-4">
 				Sie haben die Daten,
 				<br class="conditional-break"/>
 				wir haben die Antworten.
 			</h2>
 
-			<h4 class="headline-04 mb-1">
+			<h4 class="headline-04 white mb-1">
 				Wir unterstützen Sie gerne bei allen Fragen rund um Open Data
 				<br class="conditional-break"/>
 				und wie Sie Ihre Datenbestände öffnen können
 			</h4>
 
-			<h4 class="headline-04 mb-25">Wir haben Antworten auf folgende Fragen:</h4>
+			<h4 class="headline-04 white mb-25">Wir haben Antworten auf folgende Fragen:</h4>
 
 			<div class="bullets-wrapper mb-4">
-				<span class="bullet">Wie funktioniert die Veröffentlichung von Daten?</span>
-				<span class="bullet">Welche Daten darf ich überhaupt veröffentlichen?</span>
-				<span class="bullet">Wie sollte ich offene Datensätze strukturieren?</span>
-				<span class="bullet">Welche Datensätze sind für Bürger*innen am interessantesten?</span>
-				<span class="bullet">Was kann ich  tun, damit meine Daten leichter von anderen genutzt werden können?</span>
-				<span class="bullet">Welche möglichen Anwendungen gibt es für einen spezifischen Datensatz?</span>
-				<span class="bullet">Wie kann ich die Veröffentlichung in meine Arbeitsabläufe integrieren?</span>
+				<span class="bullet white">Wie funktioniert die Veröffentlichung von Daten?</span>
+				<span class="bullet white">Welche Daten darf ich überhaupt veröffentlichen?</span>
+				<span class="bullet white">Wie sollte ich offene Datensätze strukturieren?</span>
+				<span class="bullet white">Welche Datensätze sind für Bürger*innen am interessantesten?</span>
+				<span class="bullet white">Was kann ich  tun, damit meine Daten leichter von anderen genutzt werden können?</span>
+				<span class="bullet white">Welche möglichen Anwendungen gibt es für einen spezifischen Datensatz?</span>
+				<span class="bullet white">Wie kann ich die Veröffentlichung in meine Arbeitsabläufe integrieren?</span>
 			</div>
 
-			<h3 class="headline-03 primary mb-4">
+			<h3 class="headline-03 white primary mb-4">
 				Open Data erfolgreich umzusetzen ist ein mehrstufiger Prozess. 
 				<br class="conditional-break-2"/>
 				Wir begleiten Sie auf diesem Weg. 
@@ -166,7 +168,7 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper white" id="schedule">
+	<div class="section-wrapper white" id="s_schedule">
 		<div class="section pt-12 pb-12">
 			<h2 class="headline-02 mb-4">
 				Unsere Veranstaltungen
@@ -179,7 +181,7 @@
 					<div class="schedule-event-block pt-1 pb-1">
 						<div class="schedule-date mr-3">
 							<span class="headline-02">24.</span> <br class="conditional-break-2"> 
-							<span class="headline-03 schedule-date-month">Oktober</span>
+							<span class="schedule-date-month">Oktober</span>
 						</div>
 						<div class="schedule-time mr-3 primary">15-18 Uhr</div>
 
@@ -194,7 +196,7 @@
 					<div class="schedule-event-block pt-1 pb-1">
 						<div class="schedule-date mr-3">
 							<span class="headline-02">24.</span> <br class="conditional-break-2">  
-							<span class="headline-03 schedule-date-month">Oktober</span>
+							<span class="schedule-date-month">Oktober</span>
 						</div>
 						<div class="schedule-time mr-3 primary">15-18 Uhr</div>
 
@@ -209,7 +211,7 @@
 					<div class="schedule-event-block pt-1 pb-1">
 						<div class="schedule-date mr-3">
 							<span class="headline-02">24.</span> <br class="conditional-break-2">  
-							<span class="headline-03 schedule-date-month">Oktober</span>
+							<span class="schedule-date-month">Oktober</span>
 						</div>
 						<div class="schedule-time mr-3 primary">15-18 Uhr</div>
 
@@ -237,39 +239,39 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper light" id="projects">
+	<div class="section-wrapper primary" id="s_projects">
 		<div class="section pt-12 pb-12">
-			<h2 class="headline-02 mb-4">
+			<h2 class="headline-02 white mb-4">
 				Was kann man mit Open Data machen?
 			</h2>
 
-			<h4 class="headline-04 mb-2">Hier sind drei Beispiele, die das Potenzial von Open Data darstellen.</h4>
+			<h4 class="headline-04 white mb-2">Hier sind drei Beispiele, die das Potenzial von Open Data darstellen.</h4>
 
 			<div class="projects-wrapper">
 					<div class="project mr-3">
 						<div class="project-image proj-02"></div>
 						<div class="project-desc-wrapper">
 							<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche</a></span>
-							<span class="project-desc-author">Technologiestiftung Berlin</span>
+							<span class="project-desc-author white">Technologiestiftung Berlin</span>
 						</div>
 					</div>
 					<div class="project mr-3">
 						<div class="project-image proj-01"></div>
 						<div class="project-desc-wrapper">
 							<span class="project-desc-title"><a class="cross-link" href="https://offenerhaushalt.de/">Offener Haushalt</a></span>
-							<span class="project-desc-author">Open Knowledge Foundation Deutschland</span>
+							<span class="project-desc-author white">Open Knowledge Foundation Deutschland</span>
 						</div>
 					</div>
 					<div class="project mr-3">
 						<div class="project-image proj-03"></div>
 						<div class="project-desc-wrapper">
 							<span class="project-desc-title"><a class="cross-link" href="https://www.allyapp.com/">Ally App</a></span>
-							<span class="project-desc-author">Door2Door GmbH</span>
+							<span class="project-desc-author white">Door2Door GmbH</span>
 						</div>
 					</div>
 				</div>
 				
-				<h4 class="headline-04 mb-4 mt-4">
+				<h4 class="headline-04 white mb-4 mt-4">
 					Weitere Beispiele sowie andere Ressourcen, die Ihnen bei der Generierung <br class="conditional-break">
 					und Veröffentlichung von Open Data helfen, finden Sie auf der Seite des <br class="conditional-break">
 					<a class="cross-link" href="https://lab.technologiestiftung-berlin.de/">Ideation & Prototyping Lab</a> der Technologiestiftung-Berlin.
@@ -279,9 +281,9 @@
 		</div>
 	</div>
 
-	<div class="section-wrapper" id="contact">
+	<div class="section-wrapper" id="s_contact">
 		<div class="section pt-12 pb-12">
-			<h2 class="headline-02 inverted mb-4">
+			<h2 class="headline-02 white mb-4">
 				Sie brauchen Unterstützung mit Open Data
 				<br class="conditional-break">
 				oder haben Feedback?
@@ -446,6 +448,6 @@
 				</div>
 		</div>
 	</div>
-
+	<script src="./index.js"></script>
 </body>
 </html>
