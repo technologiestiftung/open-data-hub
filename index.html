@@ -7,14 +7,33 @@
 
 	
 	<body>
-	
-		<!--build:js js/main.min.js -->
-		<script src="./vis.js"></script>
-		<script src="./index.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.0/p5.min.js"></script>
-		<!-- endbuild -->
-		
-		<div class="section">
+		<script src="./js/p5.min.js"></script>
+		<script src="./js/p5.easycam.min.js"></script>
+		<script src="./js/index.js"></script>
+		<script src="./js/vis.js"></script>
+
+		<div id="canvas"></div>
+
+		<div class="section section-nav">
+
+			<svg class="logo" width="338px" height="53px" viewBox="0 0 528 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+				<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+					<g id="Group-5" transform="translate(0.000000, 1.000000)">
+						<text id="Open-Data-Informatio" font-family="Clan Medium" font-size="18" font-weight="bold" line-spacing="25" letter-spacing="1.60000002" fill="#FFFFFF">
+							<tspan x="108.777039" y="18">OPEN DATA </tspan>
+							<tspan x="108.777039" y="43">INFORMATIONSSTELLE</tspan>
+							<tspan x="340.005039" y="43" font-family="Clan Medium"></tspan>
+							<tspan x="108.777039" y="68" font-family="Clan Book">BERLI</tspan>
+							<tspan x="168.149039" y="68" font-family="Clan Book">N</tspan>
+						</text>
+						<g id="Group-4" stroke="#FFFFFF" stroke-width="2">
+							<circle id="Oval-Copy-14" transform="translate(35.278814, 46.278868) rotate(-90.000000) translate(-35.278814, -46.278868) " cx="35.2788136" cy="46.2788683" r="34.2875926"></circle>
+							<circle id="Oval-Copy-16" transform="translate(73.687603, 8.612839) rotate(-90.000000) translate(-73.687603, -8.612839) " cx="73.6876027" cy="8.61283928" r="8.61283928"></circle>
+						</g>
+					</g>
+				</g>
+			</svg>
+						
 			<div class="navbar mt-2">
 				<a class="nav-item" onclick="moveTo('s_openData');">Open Data</a>
 				<a class="nav-item" onclick="moveTo('s_process');">Prozess</a>
@@ -25,13 +44,11 @@
 		</div>
 
 		<div class="section-wrapper intro">
-			<div class="logo-tsb"></div>
 			<div class="section">
-				<h1 class="inverted headline-01 pt-12 pb-5">
-					Open Data für <br class="conditional-break"/>
+				<h1 class="inverted headline-01 pt-18 pb-5">
+					<span class="secondary">Open Data</span> für <br class="conditional-break"/>
 					ein offenes Berlin
 				</h1>
-				<div id="canvas" class="mb-4"></div>
 				<h3 class="headline-03 white">
 					Sie haben die Daten. Wir haben die Antworten: <br class="conditional-break"/>
 					gemeinsam mit Ihnen optimieren wir Daten & Prozesse
@@ -103,11 +120,10 @@
 					<div class="tile-wrapper pt-3">
 		
 						<div class="tile">
-							<div class="tile-arrow-short spacing-arrow-01"></div>
 							<div class="tile-image process-01"></div>
 							<div class="tile-headline-wrapper">
 								<span class="process-step">1.</span>
-								<span class="process-headline mb-25">Erste <br/> Schritte</span>
+								<span class="process-headline mb-1">Erste <br/> Schritte</span>
 								<p class="copy white">
 									Wir informieren Sie über die Potenziale von Open Data und betrachten gemeinsam mit Ihnen, welche Möglichkeiten sich für Sie aus der Öffnung von Daten ergeben.
 								</p>
@@ -118,33 +134,25 @@
 							<div class="tile-image process-02"></div>
 							<div class="tile-headline-wrapper">
 								<span class="process-step">2.</span>
-								<span class="process-headline mb-25">Daten
+								<span class="process-headline mb-1">Daten
 										<br/> sichten</span>
 								<p class="copy white">
 									Wir helfen Ihnen, geeignete Datensätze in ihrer Einrichtung zu finden und für die Veröffentlichung aufzubereiten. 
 								</p>
 							</div>
 						</div>
-					</div>
-		
-					<div class="tile-wrapper condition-3">
-						<div class="tile-arrow-long"></div>
-					</div>
-		
-					<div class="tile-wrapper mt-4">
-		
+
 						<div class="tile">
-								<div class="tile-arrow-short spacing-arrow-03"></div>
 								<div class="tile-image process-03"></div>
 								<div class="tile-headline-wrapper">
 									<span class="process-step">3.</span>
-									<span class="process-headline mb-25">
+									<span class="process-headline mb-1">
 										Veröffentlichung 
 										<br/>
 										planen
 									</span>
 									<p class="copy white">
-										Wir begleiten sie bei der initialen Datenveröffentlichung und unterstützen bei technischen oder rechtlichen Fragen.
+										Wir begleiten sie bei der initialen Daten-<wbr/>veröffentlichung und unterstützen bei technischen oder rechtlichen Fragen.
 									</p>
 								</div>
 							</div>
@@ -153,14 +161,14 @@
 							<div class="tile-image process-04"></div>
 							<div class="tile-headline-wrapper">
 								<span class="process-step">4.</span>
-								<span class="process-headline white mb-25">Nutzung<br/> fördern</span>
+								<span class="process-headline white mb-1">Nutzung<br/> fördern</span>
 								<p class="copy white">
 									Wir zeigen Ihnen Möglichkeiten, wie Sie die Weiternutzung Ihrer Daten fördern und neue Anwendungen unterstützen können.
 								</p>
 							</div>
 						</div>
-
 					</div>
+
 
 				</div>
 

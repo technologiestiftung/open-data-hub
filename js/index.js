@@ -1,6 +1,6 @@
 'use strict';
 
-var color = false;
+var currentColor = false;
 
 var setColorNav = function setColorNav() {
     var section_01 = document.getElementById('s_openData').getBoundingClientRect().y - 40;
@@ -10,21 +10,21 @@ var setColorNav = function setColorNav() {
     var scrollY = window.scrollY;
     var navbar = document.querySelector('.navbar');
 
-    if (section_01 >= 0 && color == true) {
+    if (section_01 >= 0 && currentColor == true) {
         navbar.classList.toggle('primary');
-        color = false;
-    } else if (section_01 <= 0 && section_02 > 0 && color == false) {
+        currentColor = false;
+    } else if (section_01 <= 0 && section_02 > 0 && currentColor == false) {
         navbar.classList.toggle('primary');
-        color = true;
-    } else if (section_02 <= 0 && section_03 > 0 && color == true) {
+        currentColor = true;
+    } else if (section_02 <= 0 && section_03 > 0 && currentColor == true) {
         navbar.classList.toggle('primary');
-        color = false;
-    } else if (section_03 <= 0 && section_04 > 0 && color == false) {
+        currentColor = false;
+    } else if (section_03 <= 0 && section_04 > 0 && currentColor == false) {
         navbar.classList.toggle('primary');
-        color = true;
-    } else if (section_04 <= 0 && color == true) {
+        currentColor = true;
+    } else if (section_04 <= 0 && currentColor == true) {
         navbar.classList.toggle('primary');
-        color = false;
+        currentColor = false;
     }
 };
 

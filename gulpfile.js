@@ -25,6 +25,15 @@ gulp.task('sass', function () {
         }));
 });
 
+gulp.task('sassWatch', function () {
+    return gulp.src('scss/root.scss')
+        .pipe(sass())
+        .pipe(gulp.dest(''))
+        .pipe(browserSync.reload({
+            stream: true
+        }));
+});
+
 gulp.task('assets', function() {
     gulp.src('./assets/*.*')
         .pipe(gulp.dest('./dist/assets/'));
@@ -41,7 +50,8 @@ gulp.task('index-html', function() {
 })
 
 gulp.task('js', function () {
-    return gulp.src('*.js').pipe(babel({ presets: ['env'] })).pipe(gulp.dest('dist'));
+    return gulp.src('js/*.js')
+        .pipe(gulp.dest('dist/js'));
 });
 
 gulp.task('useref', function () {
@@ -50,10 +60,10 @@ gulp.task('useref', function () {
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('build', ['sass', 'js', 'index-html', 'assets', 'useref', 'fonts']);
+gulp.task('build', ['sass', 'js', 'index-html', 'assets', 'js', 'fonts']);
 
-gulp.task('watch', ['browserSync', 'sass', 'fonts'], function () {
-    gulp.watch('scss/**/*.scss', ['sass']);
+gulp.task('watch', ['browserSync', 'sassWatch', 'fonts'], function () {
+    gulp.watch('scss/**/*.scss', ['sassWatch']);
     gulp.watch('index.html', browserSync.reload);
     gulp.watch('js/*.js', browserSync.reload);
 });
