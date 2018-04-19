@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: space-between; }
   .section-nav .logo {
-    padding-top: 51rem; }
+    padding-top: 90vh; }
 
 .credentials {
   display: flex;
