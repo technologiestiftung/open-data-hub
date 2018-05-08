@@ -1,3 +1,4 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -261,8 +262,9 @@ svg:hover polygon {
       flex-direction: row;
       max-width: 64rem;
       margin: 0 auto; }
-      .schedule-wrapper .schedule-event .schedule-event-block .schedule-desc-wrapper {
-        width: 450px; }
+
+.schedule-desc-wrapper {
+  width: 555px; }
 
 .project-desc-author {
   width: 250px; }
@@ -485,6 +487,8 @@ p.copy {
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
   .section {
     width: 80%; }
+  .schedule-desc-wrapper {
+    width: 380px; }
   .copy-funding {
     width: 100%; }
   .links {
@@ -556,12 +560,17 @@ p.copy {
   .schedule-wrapper .schedule-event .schedule-event-block {
     flex-wrap: wrap; }
     .schedule-wrapper .schedule-event .schedule-event-block .schedule-time {
-      width: 25%;
+      width: 27%;
       margin-right: 0;
       padding-top: 0rem;
       text-align: right; }
     .schedule-wrapper .schedule-event .schedule-event-block .schedule-desc-wrapper {
       padding-top: 0.5rem; }
+  .schedule-time {
+    width: 27%;
+    margin-right: 0;
+    padding-top: 0rem;
+    text-align: right; }
   .links {
     left: 0;
     position: relative;

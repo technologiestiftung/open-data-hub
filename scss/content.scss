@@ -291,12 +291,12 @@ svg:hover polygon {
             flex-direction: row;
             max-width: 64rem;
             margin: 0 auto;
-
-            .schedule-desc-wrapper {
-                width: 450px;
-            }
         }        
     }
+}
+
+.schedule-desc-wrapper {
+    width: 555px;
 }
 
 .project-desc-author {
@@ -626,6 +626,10 @@ p.copy {
         width: 80%;
     }
 
+    .schedule-desc-wrapper {
+        width: 380px;
+    }
+
     .copy-funding {
         width: 100%;
     }
@@ -757,7 +761,7 @@ p.copy {
             .schedule-event-block {
                 flex-wrap: wrap;
                 .schedule-time {
-                    width: 25%;
+                    width: 27%;
                     margin-right: 0;
                     padding-top: 0rem;
                     text-align: right;
@@ -768,6 +772,13 @@ p.copy {
                 }
             }
         }
+    }
+
+    .schedule-time {
+        width: 27%;
+        margin-right: 0;
+        padding-top: 0rem;
+        text-align: right;
     }
 
     .links {
