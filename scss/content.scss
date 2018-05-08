@@ -20,7 +20,7 @@ body {
     justify-content: space-between;
 
     .logo {
-        padding-top: 90vh;
+        padding-top: 84vh;
     }
 }
 
@@ -56,6 +56,22 @@ svg:hover polygon {
     fill: $color-primary-minimum;
 }
 
+svg.logo-berlin:hover path {
+    fill: $color-secondary;
+}
+
+svg.logo-ibb:hover  {
+    path#letter {
+        fill: $color-black;
+    }
+    polygon#letter {
+        fill: $color-black;
+    }
+    path#Shape {
+        fill: $color-petrol;
+    }
+}
+
 .copy-funding {
     line-height: $line-height-l;
 }
@@ -82,7 +98,7 @@ svg:hover polygon {
     }
 
     &:hover {
-        background: $color-primary-minimum;
+        background: $color-secondary-hover;
         transition: background $transition-short;
     }
 
@@ -170,6 +186,7 @@ svg:hover polygon {
 
 .headline-02.white {
     color: white;
+    letter-spacing: 1px;
 }
 
 .headline-04.white {
@@ -185,12 +202,13 @@ svg:hover polygon {
     font-size: $font-size-xl;
     line-height: $line-height-l;
     color: $color-black;
-    letter-spacing: -0.5px;
+    // letter-spacing: .5px;
 }
 
 .headline-03.white {
     font-family: 'Clan Medium', sans-serif;
     color: white;
+    letter-spacing: 1px;
 }
 
 .odis-logo-typo {
@@ -505,6 +523,7 @@ svg:hover polygon {
                 font-size: $font-size-l;
                 color: $color-primary;
                 margin-bottom: .5rem;
+                letter-spacing: $spacing;
             }
         }
     }
@@ -711,6 +730,12 @@ p.copy {
 
     .pb-12 { padding-bottom: 10rem; }
     .pt-12 { padding-top: 10rem; }
+}
+
+@media screen and (max-height: 700px) {
+    .pt-18 {
+        padding-top: 10rem;
+    }
 }
 
 @media screen and (min-width: 28rem) and (max-width: 54rem) {
@@ -941,6 +966,10 @@ p.copy {
 
     .conditional-break-2 {
         display: none;
+    }
+
+    .pb-5 {
+        padding-bottom: 2rem;
     }
 
     .headline-01 {

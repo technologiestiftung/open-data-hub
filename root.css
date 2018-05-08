@@ -38,11 +38,11 @@ table {
 
 @font-face {
   font-family: "Clan Medium";
-  src: url("assets/fonts/clan-medium.otf") format("opentype"); }
+  src: url("assets/fonts/clan-medium.woff") format("woff"); }
 
 @font-face {
   font-family: "Clan Book";
-  src: url("assets/fonts/clan-book.otf") format("opentype"); }
+  src: url("assets/fonts/clan-book.woff") format("woff"); }
 
 body {
   font-family: 'Clan Book', sans-serif;
@@ -62,7 +62,7 @@ body {
   display: flex;
   justify-content: space-between; }
   .section-nav .logo {
-    padding-top: 90vh; }
+    padding-top: 84vh; }
 
 .credentials {
   display: flex;
@@ -86,6 +86,18 @@ svg:hover path {
 
 svg:hover polygon {
   fill: #4363d4; }
+
+svg.logo-berlin:hover path {
+  fill: #E60032; }
+
+svg.logo-ibb:hover path#letter {
+  fill: #000000; }
+
+svg.logo-ibb:hover polygon#letter {
+  fill: #000000; }
+
+svg.logo-ibb:hover path#Shape {
+  fill: #00ACCF; }
 
 .copy-funding {
   line-height: 140%; }
@@ -112,7 +124,7 @@ svg:hover polygon {
   .button-primary:focus {
     outline: 0; }
   .button-primary:hover {
-    background: #4363d4;
+    background: #b10026;
     transition: background 0.1s; }
 
 .navbar.primary > * {
@@ -167,7 +179,8 @@ svg:hover polygon {
   color: #E60032; }
 
 .headline-02.white {
-  color: white; }
+  color: white;
+  letter-spacing: 1px; }
 
 .headline-04.white {
   color: white; }
@@ -179,12 +192,12 @@ svg:hover polygon {
   font-family: 'Clan Medium', sans-serif;
   font-size: 36px;
   line-height: 140%;
-  color: #000000;
-  letter-spacing: -0.5px; }
+  color: #000000; }
 
 .headline-03.white {
   font-family: 'Clan Medium', sans-serif;
-  color: white; }
+  color: white;
+  letter-spacing: 1px; }
 
 .odis-logo-typo {
   letter-spacing: 5px; }
@@ -399,7 +412,8 @@ svg:hover polygon {
       .projects-wrapper .project .project-desc-wrapper .project-desc-title {
         font-size: 24px;
         color: #213A8F;
-        margin-bottom: .5rem; }
+        margin-bottom: .5rem;
+        letter-spacing: 0.5px; }
 
 .cross-link {
   font-family: 'Clan Medium', sans-serif;
@@ -528,6 +542,10 @@ p.copy {
   .pb-12 {
     padding-bottom: 10rem; }
   .pt-12 {
+    padding-top: 10rem; } }
+
+@media screen and (max-height: 700px) {
+  .pt-18 {
     padding-top: 10rem; } }
 
 @media screen and (min-width: 28rem) and (max-width: 54rem) {
@@ -669,15 +687,17 @@ p.copy {
     margin-top: 4rem; }
   .conditional-break-2 {
     display: none; }
+  .pb-5 {
+    padding-bottom: 2rem; }
   .headline-01 {
-    font-size: 36px;
+    font-size: 30px;
     letter-spacing: 0.5px; }
   .headline-02 {
     font-size: 28px;
     letter-spacing: 0.5px; }
   .headline-03 {
     font-family: 'Clan Medium', sans-serif;
-    font-size: 22px;
+    font-size: 18px;
     letter-spacing: 0.5px; }
   .headline-04 {
     line-height: 140%;
