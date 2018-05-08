@@ -193,11 +193,16 @@ svg:hover polygon {
     color: white;
 }
 
+.odis-logo-typo {
+    letter-spacing: 5px;
+}
+
 .headline-03 {
     font-family: 'Clan Medium', sans-serif;
     font-size: $font-size-l;
     line-height: $line-height-l;
     color: $color-black;
+    letter-spacing: $spacing;
 }
 
 .headline-04 {
@@ -209,6 +214,12 @@ svg:hover polygon {
 .intro {
     background: $color-primary;
 }
+
+@-moz-document url-prefix() {
+    h1 {
+      color: red;
+    }
+  }
 
 .section {
     margin: 0 auto;
@@ -294,6 +305,21 @@ svg:hover polygon {
         }        
     }
 }
+
+@-moz-document url-prefix() {
+    .schedule-wrapper {
+        .schedule-event {
+            .schedule-date {
+                .schedule-date-month {
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+
+  }
+
+
 
 .schedule-desc-wrapper {
     width: 555px;
@@ -420,6 +446,7 @@ svg:hover polygon {
             font-size: $font-size-m2;
             line-height: $line-height-l;
             color: white;
+            letter-spacing: $spacing;
         }
 
         .process-step {
@@ -753,6 +780,7 @@ p.copy {
 
                 .headline-03 {
                     font-size: $font-size-m;
+                    letter-spacing: $spacing;
                 }
                 text-align: left;
                 width: 60%;
@@ -874,6 +902,7 @@ p.copy {
                 .headline-02 {
                     font-size: $font-size-m;
                     color: $color-black;
+                    letter-spacing: $spacing;
                 }
                 .schedule-date-month {
                     color: $color-black;
@@ -881,6 +910,7 @@ p.copy {
                 }
                 .headline-03 {
                     font-size: $font-size-m;
+                    letter-spacing: $spacing;
                 }
                 text-align: left;
                 width: 40%;
@@ -915,15 +945,18 @@ p.copy {
 
     .headline-01 {
         font-size: $font-size-xxl-3;
+        letter-spacing: $spacing;
     }
 
     .headline-02 {
         font-size: $font-size-xl-3;
+        letter-spacing: $spacing;
     }
 
     .headline-03 {
         font-family: 'Clan Medium', sans-serif;
         font-size: $font-size-l-3;
+        letter-spacing: $spacing;
     }
 
     .headline-04 {
