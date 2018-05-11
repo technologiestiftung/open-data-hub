@@ -347,6 +347,13 @@ svg.logo-ibb:hover  {
     width: 250px;
 }
 
+.schedule-event-details-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 100%;
+}
+
 .profile-wrapper {
     display: flex;
     flex-direction: row;
@@ -354,14 +361,14 @@ svg.logo-ibb:hover  {
     .profile-image {
         width: 100px;
         height: 100px;
-        background: url('assets/profile.png') no-repeat;
+        background: url('assets/profile_2x.jpg') no-repeat center/100%;
         border-radius: 100%;
     }
 
     .profile-image-2 {
         width: 100px;
         height: 100px;
-        background: url('assets/profile-2.png') no-repeat;
+        background: url('assets/profile-2_2x.jpg') no-repeat center/100%;
         border-radius: 100%;
     }
 
@@ -664,9 +671,17 @@ p.copy {
     .conditional-break {
         display: block;
     }
+
+    .schedule-event-details-wrapper {
+        width: 37%;
+    }
 }
 
 @media screen and (min-width: 54rem) and (max-width: 64rem) {
+    .schedule-event-details-wrapper {
+        width: 45%;
+    }
+
     .section {
         // background: green;
         width: 80%;
@@ -739,6 +754,10 @@ p.copy {
 }
 
 @media screen and (min-width: 28rem) and (max-width: 54rem) {
+    .schedule-event-details-wrapper {
+        width: 100%;
+    }
+
     .section {
         // background: pink;
         width: 80%;
@@ -808,13 +827,12 @@ p.copy {
                     letter-spacing: $spacing;
                 }
                 text-align: left;
-                width: 60%;
+                // width: 60%;
                 // transform: translateX(0px);
             }
             .schedule-event-block {
                 flex-wrap: wrap;
                 .schedule-time {
-                    width: 27%;
                     margin-right: 0;
                     padding-top: 0rem;
                     text-align: right;
@@ -828,7 +846,6 @@ p.copy {
     }
 
     .schedule-time {
-        width: 27%;
         margin-right: 0;
         padding-top: 0rem;
         text-align: right;
@@ -938,13 +955,12 @@ p.copy {
                     letter-spacing: $spacing;
                 }
                 text-align: left;
-                width: 40%;
+                // width: 40%;
                 transform: translateX(0px);
             }
             .schedule-event-block {
                 flex-wrap: wrap;
                 .schedule-time {
-                    width: 40%;
                     margin-right: 0;
                     padding-top: 0rem;
                     color: $color-black;

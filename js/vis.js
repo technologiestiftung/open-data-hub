@@ -13,6 +13,10 @@ function setup() {
     frameRate(25);
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+  }
+
 function draw() {
     background(0, 1);
     noStroke();
