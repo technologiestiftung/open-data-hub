@@ -385,6 +385,86 @@ svg.logo-ibb:hover  {
     }
 }
 
+.blog-posts-intro {
+    margin-bottom: 3rem;
+}
+
+.blog-post {
+    overflow: hidden;
+    max-width: 550px;
+    margin-bottom: 70px;
+
+    .headline-03 {
+        margin-top: .5rem;
+        margin-bottom: 2rem;
+    }
+
+    .date-small {
+        color: $color-secondary;
+    }
+
+    p.copy.black {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+    
+    .blog-link {
+        font-weight: 700;
+        margin-left: 60px;
+        font-family: 'Clan Medium', sans-serif;
+        letter-spacing: 0.5px;
+        color: black;
+        margin-left: 60px;
+        text-decoration: none;
+        &::before {
+            content: '';
+            position: absolute;
+            transform: translateX(-60px) translateY(-14px);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            background: $color-grey;
+            transition: .1s background linear;
+        }
+        &:hover::before {
+            content: '';
+            position: absolute;
+            transform: translateX(-60px) translateY(-14px);
+            width: 3rem;
+            height: 3rem;
+            border-radius: 100%;
+            background: $color-secondary;
+            transition: .1s background linear;
+        }
+
+
+
+        &::after {
+            background-image: url(assets/arrow-bullet.svg);
+            transform: translateX(-137px) translateY(2px);
+            background-size: contain;
+            content: ' ';
+            width: 9px;
+            position: absolute;
+            height: 15px;
+        }
+
+        &:hover::after {
+            background-image: url(assets/arrow-bullet-white.svg);
+            transform: translateX(-137px) translateY(2px);
+            background-size: contain;
+            content: ' ';
+            width: 9px;
+            position: absolute;
+            height: 15px;
+        }
+
+    }
+
+
+}
+
+
 .tile-wrapper {
     display: flex;
     flex-direction: row;
@@ -614,6 +694,10 @@ p.copy {
 
 .mb-4 {
     margin-bottom: 4rem;
+}
+
+.mb-6 {
+    margin-bottom: 6rem;
 }
 
 .mb-2 {
