@@ -42,6 +42,9 @@
 		<script src="./js/p5.easycam.min.js"></script>
 		<script src="./js/index.js"></script>
 		<script src="./js/vis.js"></script>
+		<script type="text/javascript" src="./js/wordcloud2.js"></script>
+		<script type="text/javascript" src="./js/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="./js/dashboard.js"></script>
 
 		<div id="canvas"></div>
 
@@ -326,8 +329,72 @@
 		<div class="section-wrapper white" id="s_opendata">
 			<div class="section pt-12 pb-12">
 				<h2 class="headline-02 mb-4">
-					Erfolgsgeschichten
+					Berlin Open Data
 				</h2>
+
+				<div class="container-out">
+    
+					<div class="container-in">
+					
+					<div class="grid">  
+					  
+						<div class="a content">
+
+							<div class="wrapper-inner" style="height: 50%">
+								<h3 class="headline-03 white">Datensätze</h3>
+								<div class="flex col mt-2">
+									<span id="totalDatasets" class="alt-1">...LOADING</span>
+									<span class="transp">Alle Datensätze</span>
+								</div>
+								<div class="flex col mt-2">
+									<span id="last30" class="alt-1">...LOADING</span>
+									<span class="transp">im letzten Monat</span>
+								</div>
+							</div>
+
+							<div class="wrapper-inner" style="height: 50%">
+								<h3 class="top-pad headline-03 white mt-2">Neueste Daten</h3>
+								<p class="dataset mt-2" id="newest0">...LOADING</p>
+								<p class="dataset" id="newest1">...LOADING</p>
+								<p class="dataset" id="newest2">...LOADING</p>
+								<p class="dataset" id="newest3">...LOADING</p>
+								<p class="dataset" id="newest4">...LOADING</p>
+							</div>
+						</div>
+					 
+					 <div class="b content">
+						<h3 class="headline-03 white">Häufigste Tags</h3>
+					   <div class="chart-container">
+						<canvas id="tagCanvas"></canvas>
+					  </div>
+					  </div>
+				
+					  <div class="c content">
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Top-Bereitsteller</h3>
+						<div class="chart-container">
+						<canvas id="chartOne"></canvas>
+					  </div>
+					  </div>
+					  
+					  <div class="d content headline-03 white">
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Top-Lizenzen</h3>
+						<div class="chart-container">
+						<canvas id="chartTwo"> </canvas>
+					  </div>
+					  </div>
+					  
+					  <div class="e content"> 
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Update-Aktivität</h3>
+						<div class="chart-container activity">
+						<canvas id="activity"> </canvas>
+					  </div>
+					  </div>
+					 
+				
+					 </div>
+				   </div>
+				  </div>
+				   
 
 				
 			</div>
