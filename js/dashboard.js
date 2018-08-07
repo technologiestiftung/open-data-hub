@@ -32,32 +32,31 @@ Promise.all([data, data2])
 	return resultsArray;
 })
 .then(data => {
-	console.dir(data);
 	initialize(data);
 });
 
 function initialize(results) {
 
-    console.log(results);
-
 	var licenses = getHighscores(results, "license", 5);
 	var authors = getHighscores(results, "author", 7);
 	var tags = getHighscores(results, "tags", 20);
+	var category = getHighscores(results, "category", 20);
 	var formats = getHighscores(results, "formats", 7);
     var activity = getTimestamps(results); 
-    var newest5 = findNewest(results) 
+	var newest5 = findNewest(results) 
+	
   	
 	makeChart(getHighscores(results, "author", 7));
-	makeDonut(getHighscores(results, "license", 5));
+	makeDonut(category);
 	makeTagCloud(getHighscores(results, "tags", 20));
 	makeActivity(getTimestamps(results));
 	last30Days(results);
 	//Fill HTML
 	document.getElementById("totalDatasets").innerHTML = getTotalNumber(results);
-	document.getElementById("last30").innerHTML = getTotalNumber(last30Days(results));
+	document.getElementById("last30").innerHTML = "+" + getTotalNumber(last30Days(results));
 	
 	for (var i=0; i<5; i++) {
-		document.getElementById("newest" + i).innerHTML = newest5[i].title + "<a class='alt-1 right cross-link' href='"+ newest5[i].url + "'></a><br />";
+		document.getElementById("newest" + i).innerHTML = "<span>" + newest5[i].title + "</span>" + "<a class='dl-arrow right cross-link' href='"+ newest5[i].url + "' target='_blank'><div></div></a><br />";
 	}
 }
 
@@ -80,14 +79,13 @@ function last30Days(data) {
 	var lastMonth = new Date(now);
 		lastMonth.setDate(now.getDate() - 30);
 
-	var last30 = data.filter(x => Date.parse(x.metadata_modified) > Date.parse(lastMonth));
+	var last30 = data.filter(x => Date.parse(x.metadata_created) > Date.parse(lastMonth));
 	return last30;
 }
 
 
-
 function getHighscores(data, item, amount){
-	
+
 	var countsObj = {};
 
 	if (item === "author") {
@@ -151,6 +149,16 @@ function getHighscores(data, item, amount){
 			});
 
 		}	
+	} else if (item === "category") {
+		for (var i = 0; i < data.length; i++) {
+			data[i].groups.forEach(function(el) {
+				if (countsObj.hasOwnProperty(el.display_name)) {
+					countsObj[el.display_name]++
+				} else {
+					countsObj[el.display_name] = 1;
+				}
+			});
+		}	
 	}
 
 		var props = Object.keys(countsObj).map(function(key) {
@@ -186,7 +194,6 @@ function makeChart(value) {
 	        labels: authorNames,
 
 	        datasets: [{
-	            
 	            data: nrOfDatasets,
 	            backgroundColor: '#FFFFFF',
                 borderColor: '#FFFFFF',
@@ -204,21 +211,25 @@ function makeChart(value) {
 	    	maintainAspectRatio: false,
 	        legend: {
 	        	display: false
-	        },
+			},
+			tooltips: {
+				// enabled: false
+				cornerRadius: 0,
+			},
 	        scales: {
 	            yAxes: [{
 	                ticks: {
 	                	fontColor: "#909CC6",
 	                    beginAtZero:true,
                         color: '#00eeee',
-                        fontFamily: 'Clan Medium'
+                        fontFamily: 'Clan Book'
 	                }
 	            }],
 	            xAxes: [{
 	            	ticks: {
 	            		fontColor: "#909CC6",
 	            		autoSkip: false,
-                        fontFamily: 'Clan Medium'
+                        fontFamily: 'Clan Book'
 	            	}
 	            }]
 	        }
@@ -227,6 +238,7 @@ function makeChart(value) {
 }
 
 function makeDonut(value) {
+	
 	
 	var licenceDict = {
 		"Creative Commons Attribution": "CC-BY",
@@ -238,24 +250,21 @@ function makeDonut(value) {
 	}
 
 	var ctx = document.getElementById("chartTwo").getContext('2d');
-	ctx.canvas.height = 260;
+	ctx.canvas.height = 200;
 
-	var licenceNames = value.map((el) => licenceDict[el.key]);
-	var nrOfDatasets = value.map((el) => el.value);
-
+    var licenceNames = value.map((el) => el.key);
+    var nrOfDatasets = value.map((el) => el.value);
+    
 	var myChart = new Chart(ctx, {
 	    type: 'doughnut',
 	    data: {
 	        labels: licenceNames,
-
 	        datasets: [{
-	            
 	            data: nrOfDatasets,
-	            backgroundColor: '#213A8F',
-	            borderColor: '#FFFFFF',
+	            backgroundColor: '#FFFFFF',
+	            borderColor: '#213A8F',
                 borderWidth: 1,
                 fontFamily: 'Clan Medium'
-
 	        }]
 	    },
 	    options: {
@@ -263,8 +272,10 @@ function makeDonut(value) {
 	        maintainAspectRatio: false,
 	        legend: {
 	        	display: false
-	        }
-	        
+			},
+			tooltips: {
+				cornerRadius: 0
+			}
 	    }
 	});
 
@@ -272,11 +283,9 @@ function makeDonut(value) {
 
 function makeActivity(value) {
 	
-	console.dir(value)
 	var dateObj = {};
 	var dateArr = [];
 	var valueArr = [];
-
 
 	value.forEach(function(el) {
 		var d = new Date(el.time);
@@ -329,7 +338,7 @@ function makeActivity(value) {
 	                ticks: {
 	                	fontColor: "#909CC6",
                         color: '#00eeee',
-                        fontFamily: 'Clan Medium',
+                        fontFamily: 'Clan Book',
                     },
                     gridLines: {
                         color: '#243E98'
@@ -339,7 +348,7 @@ function makeActivity(value) {
 	            xAxes: [{
 	            	ticks: {
                         fontColor: "#909CC6",
-                        fontFamily: 'Clan Medium',
+                        fontFamily: 'Clan Book',
 	            		gridLines: '#909CC6'
                     },
                     gridLines: {

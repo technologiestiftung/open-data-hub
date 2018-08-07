@@ -23,7 +23,7 @@ canvas {
 	color: var(--border-color);
 	padding: 1.5rem;
 	border: 2px solid;
-	border-radius: 0.3em;
+	border-radius: 10px;
 	overflow: hidden;
 
 }
@@ -93,18 +93,24 @@ h2.top-pad {
 }
 
 .transp {
+	margin-top: .25rem;
 	opacity: .5;
 }
 
 .dataset {
+	display: flex;
 	margin-bottom: 1rem;
 	line-height: 125%;
-	width: 70%;
+	width: 100%;
+	position: relative;
+
+	span {
+		width: 90%;
+	}
 }
 
 .content a {
 	text-decoration: none;
-	padding: 0.5em 0 0 0.5em;
 }
 
 .alt-1 {
@@ -130,7 +136,7 @@ h2.top-pad {
 }
 
 
-@media screen and (max-width: 1080px)   {  
+@media screen and (max-width: 1180px)   {  
 	.grid {
 		grid-template-columns: auto auto;
 		grid-template-areas: 

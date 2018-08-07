@@ -202,7 +202,7 @@
 		</div>
 
 		<div class="section-wrapper white" id="s_schedule">
-			<div class="section pt-12 pb-12">
+			<div class="section pt-12">
 				<h2 class="headline-02 mb-4">
 					Aktuelles und Veranstaltungen in 2018
 				</h2>
@@ -326,13 +326,15 @@
 			</div>
 		</div>
 
-		<!-- Here comes the visualization! -->
-
 		<div class="section-wrapper white" id="s_opendata">
 			<div class="section pt-12 pb-12">
 				<h2 class="headline-02 mb-4">
-					Berlin Open Data
+					Open Data Dashboard
 				</h2>
+
+				<h4 class="headline-04 mb-4">
+					Das offizielle <a class="cross-link" href="http://daten.berlin.de">Datenportal</a> der Senatsverwaltung ist die zentrale Anlaufstelle für offene Daten in Berlin. Dieses Dashboard generiert einen stets aktuellen Überblick direkt aus der Schnittstelle des Portals.
+				</h4>
 
 				<div class="container-out">
     
@@ -342,25 +344,25 @@
 					  
 						<div class="a content">
 
-							<div class="wrapper-inner" style="height: 50%">
+							<div class="wrapper-inner" style="height: 35%">
 								<h3 class="headline-03 white">Datensätze</h3>
 								<div class="flex col mt-2">
-									<span id="totalDatasets" class="alt-1">...LOADING</span>
+									<span id="totalDatasets" class="alt-1"></span>
 									<span class="transp">Alle Datensätze</span>
 								</div>
 								<div class="flex col mt-2">
-									<span id="last30" class="alt-1">...LOADING</span>
+									<span id="last30" class="alt-1"></span>
 									<span class="transp">im letzten Monat</span>
 								</div>
 							</div>
 
 							<div class="wrapper-inner" style="height: 50%">
 								<h3 class="top-pad headline-03 white mt-2">Neueste Daten</h3>
-								<p class="dataset mt-2" id="newest0">...LOADING</p>
-								<p class="dataset" id="newest1">...LOADING</p>
-								<p class="dataset" id="newest2">...LOADING</p>
-								<p class="dataset" id="newest3">...LOADING</p>
-								<p class="dataset" id="newest4">...LOADING</p>
+								<div class="dataset mt-2" id="newest0"></div>
+								<div class="dataset" id="newest1"></div>
+								<div class="dataset" id="newest2"></div>
+								<div class="dataset" id="newest3"></div>
+								<div class="dataset" id="newest4"></div>
 							</div>
 						</div>
 					 
@@ -379,7 +381,7 @@
 					  </div>
 					  
 					  <div class="d content headline-03 white">
-						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Top-Lizenzen</h3>
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Kategorien</h3>
 						<div class="chart-container">
 						<canvas id="chartTwo"> </canvas>
 					  </div>
@@ -413,31 +415,31 @@
 					Hier sind einige Beispiele aus Berlin:</h4>
 
 				<div class="projects-wrapper">
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-02"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche <br> in Berlin</a></span>
 								<span class="project-desc-author white">Das Berliner Kita-Angebot in einer interaktiven Suche mit Filter und Routing-Funktion</span>
 							</div>
 						</div>
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-01"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="https://offenerhaushalt.de/">Offener Haushalt</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="https://offenerhaushalt.de/">Offener <br> Haushalt</a></span>
 								<span class="project-desc-author white">Haushaltsdaten von Bund, Ländern und Kommunen dynamisch explorieren</span>
 							</div>
 						</div>
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-03"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="https://www.technologiestiftung-berlin.de/de/projekte/projekt/minecraft/">Berlin in Minecraft</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="https://www.technologiestiftung-berlin.de/de/projekte/projekt/minecraft/">Berlin in <br> Minecraft</a></span>
 								<span class="project-desc-author white">Die Berliner Stadtmitte Block für Block entdecken und spielerisch neu gestalten</span>
 							</div>
 						</div>
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-04"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="http://badegewaesser-berlin.de/">Berliner Badestellen</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="http://badegewaesser-berlin.de/">Berliner <br> Badestellen</a></span>
 								<span class="project-desc-author white">Die Standorte sowie Wasserqualität der Berliner Badegewässer schnell prüfen</span>
 							</div>
 						</div>
