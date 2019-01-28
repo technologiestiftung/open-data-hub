@@ -22,12 +22,12 @@
 		<meta name="twitter:url" content="http://odis-berlin.de">
 		<meta name="twitter:title" content="Open Data Informationsstelle Berlin">
 		<meta name="twitter:description" content="Sie haben die Daten. Wir haben die Antworten. Gemeinsam mit ihnen optimieren wir Daten & Prozesse">
-		<meta name="twitter:image" content="http://lab.technologiestiftung-berlin.de/projects/funding/images/social_media.jpg">
+		<meta name="twitter:image" content="http://odis-berlin.de/assets/social-media.jpg">
 
 		<!-- GOOGLE+/SCHEMA.ORG -->
 		<meta itemprop="name" content="Open Data Informationsstelle Berlin">
 		<meta itemprop="description" content="Sie haben die Daten. Wir haben die Antworten. Gemeinsam mit ihnen optimieren wir Daten & Prozesse">
-		<meta itemprop="image" content="http://lab.technologiestiftung-berlin.de/projects/funding/images/social_media.jpg">
+		<meta itemprop="image" content="http://odis-berlin.de/assets/social-media.jpg">
 
 		<!-- CANONICAL URL -->
 		<link rel="canonical" href="http://odis-berlin.de">
@@ -42,6 +42,9 @@
 		<script src="./js/p5.easycam.min.js"></script>
 		<script src="./js/index.js"></script>
 		<script src="./js/vis.js"></script>
+		<script type="text/javascript" src="./js/wordcloud2.js"></script>
+		<script type="text/javascript" src="./js/Chart.bundle.min.js"></script>
+		<script type="text/javascript" src="./js/dashboard.js"></script>
 
 		<div id="canvas"></div>
 
@@ -65,7 +68,7 @@
 			<div class="navbar mt-2">
 				<a class="nav-item" onclick="moveTo('s_openData');">Open Data</a>
 				<a class="nav-item" onclick="moveTo('s_process');">Prozess</a>
-				<a class="nav-item" onclick="moveTo('s_schedule');">Termine</a>
+				<a class="nav-item" onclick="moveTo('s_schedule');">Aktuelles</a>
 				<a class="nav-item" onclick="moveTo('s_projects');">Projekte</a>
 				<a class="nav-item" onclick="moveTo('s_contact');">Kontakt</a>
 			</div>
@@ -199,26 +202,26 @@
 		</div>
 
 		<div class="section-wrapper white" id="s_schedule">
-			<div class="section pt-12 pb-12">
+			<div class="section pt-12">
 				<h2 class="headline-02 mb-4">
-					Termine und Veranstaltungen in 2018
+					Aktuelles und Veranstaltungen in 2018-19
 				</h2>
 
-				<div class="schedule-wrapper">
-
+				<div class="schedule-wrapper mb-6">
+					
 					<div class="schedule-event full-width">
 						<div class="schedule-event-block pt-1 pb-1">
 							<div class="schedule-event-details-wrapper">
 								<div class="schedule-date mr-3">
-									<span class="headline-02 white">30.</span> <br class="conditional-break-2"> 
-									<span class="schedule-date-month">Mai</span>
+									<span class="headline-02 white">14.</span> <br class="conditional-break-2">  
+									<span class="schedule-date-month">Nov</span>
 								</div>
-								<div class="schedule-time mr-3 black">12:30-14:00 Uhr</div>
+								<div class="schedule-time mr-3 black">12:00-14:00 Uhr</div>
 							</div>
 
 							<div class="schedule-desc-wrapper">
-								<h3 class="headline-03 primary">Open Data Lunch</h3>
-								<p class="copy black">Verwaltungsbeschäftigte sind eingeladen, mit uns Themen rund um Open Data zu diskutieren.</p>
+								<h3 class="headline-03 black">Open Data Lunch II</h3>
+								<p class="copy black">Gemeinsam mit Verwaltungsbeschäftigen diskutieren wir, wie Open Data aktuell in der Verwaltung umgesetzt wird.</p>
 							</div>
 						</div>
 					</div>
@@ -227,35 +230,76 @@
 						<div class="schedule-event-block pt-1 pb-1">
 							<div class="schedule-event-details-wrapper">
 								<div class="schedule-date mr-3">
-									<span class="headline-02 white">13.</span> <br class="conditional-break-2">  
-									<span class="schedule-date-month">Juni</span>
+									<span class="headline-02 white">21.</span> <br class="conditional-break-2">  
+									<span class="schedule-date-month">Nov</span>
 								</div>
-								<div class="schedule-time mr-3 black">14:00-16:00 Uhr</div>
+								<div class="schedule-time mr-3 black">14:00-16:30 Uhr</div>
 							</div>
 
 							<div class="schedule-desc-wrapper">
-								<h3 class="headline-03 black">ODIS Sprechstunde</h3>
-								<p class="copy black">Sie möchten uns sprechen oder treffen? In den Sprechstunden vorbeikommen oder anrufen – ohne Voranmeldung.</p>
+								<h3 class="headline-03 primary">Arbeitstreffen Radverkehrsdaten</h3>
+								<p class="copy black">Wir erkunden mit Radverkehrsplaner*innen aus der Stadt, ob und wie die Kommunikation von Planungen verbessert werden könnte.</p>
 							</div>
 						</div>
 					</div>
-					
+
 					<div class="schedule-event full-width">
 						<div class="schedule-event-block pt-1 pb-1">
 							<div class="schedule-event-details-wrapper">
 								<div class="schedule-date mr-3">
-									<span class="headline-02 white">tbd.</span> <br class="conditional-break-2">  
-									<span class="schedule-date-month"></span>
+									<span class="headline-02 white">25.</span> <br class="conditional-break-2"> 
+									<span class="schedule-date-month">Jan</span>
 								</div>
-								<div class="schedule-time mr-3 black">demnächst mehr</div>
+								<div class="schedule-time mr-3 black">9:30-15:30 Uhr</div>
 							</div>
 
 							<div class="schedule-desc-wrapper">
-								<h3 class="headline-03 primary">Open Exchange</h3>
-								<p class="copy black">Community trifft Verwaltung: Ein Meetup, bei dem sich Open Data User*Innen und Datenbereitsteller miteinander austauschen können.</p>
+								<h3 class="headline-03 primary">Workshop: Visualisierung offener Geodaten</h3>
+								<p class="copy black">Kollegen aus der Technologiestiftung zeigen Verwaltungsbeschäftigten, wie man Geodaten mit QGIS visualisieren kann.</p>
 							</div>
 						</div>
 					</div>
+
+				</div>
+
+				<div class="blog-posts-wrapper mb-6">
+
+					<div class="blog-posts-intro">
+						<h3 class="headline-02 primary mb-1 mt-4">
+							Aktuelle Blog Posts
+						</h3>
+		
+						<span class="headline-04 mb-12">
+							Hier finden Sie die neusten Blog Posts zur Open Data Informationsstelle
+						</span>
+					</div>
+
+					<div class="blog-post">
+						<span class="date-small">13. Dezember 2018</span>
+						<h3 class="headline-03">Sensible Daten offen gestalten - der Kriminalitätsatlas Berlin</h3>
+
+						<a class="blog-link" href="https://www.technologiestiftung-berlin.de/de/blog/sensible-daten-offen-gestalten-der-kriminalitaetsatlas-berlin/">Zum Artikel</a>
+					</div>
+
+						<div class="blog-post">
+						<span class="date-small">17. Oktober 2018</span>
+						<h3 class="headline-03">ODIS in Buenos Aires: 2018 International Open Data Conference</h3>
+
+						<a class="blog-link" href="https://www.technologiestiftung-berlin.de/de/blog/odis-in-buenos-aires/">Zum Artikel</a>
+					</div>
+
+					<div class="blog-post">
+						<span class="date-small">17. September 2018</span>
+						<h3 class="headline-03">Fahrrad 4.0: Radverkehrsdaten aus Berlin</h3>
+
+						<a class="blog-link" href="https://www.technologiestiftung-berlin.de/de/blog/fahrrad-40/">Zum Artikel</a>
+					</div>
+
+					<h4 class="headline-04 black mb-4 mt-4">
+							Alle Artikel rund um Open Data finden Sie auf der Seite der <br class="conditional-break">
+							<a class="cross-link" href="https://www.technologiestiftung-berlin.de/de/blog/kategorien/odis/">Technologiestiftung Berlin.</a>
+						</h4>
+
 
 				</div>
 
@@ -271,9 +315,87 @@
 
 				<br>
 
-				<a href="mailto: odis@technologiestiftung-berlin.de">
+				<a href="mailto:odis@technologiestiftung-berlin.de">
 					<button class="button-primary mt-2">Jetzt kontaktieren</button>
 				</a>
+				
+			</div>
+		</div>
+
+		<div class="section-wrapper white" id="s_opendata">
+			<div class="section pt-12 pb-12">
+				<h2 class="headline-02 mb-4">
+					Open Data Dashboard
+				</h2>
+
+				<h4 class="headline-04 mb-4">
+					Das offizielle <a class="cross-link" href="http://daten.berlin.de">Datenportal</a> der Senatsverwaltung ist die zentrale Anlaufstelle für offene Daten in Berlin. Dieses Dashboard generiert einen stets aktuellen Überblick direkt aus der Schnittstelle des Portals.
+				</h4>
+
+				<div class="container-out">
+    
+					<div class="container-in">
+					
+					<div class="grid">  
+					  
+						<div class="a content">
+
+							<div class="wrapper-inner" style="height: 35%">
+								<h3 class="headline-03 white">Datensätze</h3>
+								<div class="flex col mt-2">
+									<span id="totalDatasets" class="alt-1"></span>
+									<span class="transp">Alle Datensätze</span>
+								</div>
+								<div class="flex col mt-2">
+									<span id="last30" class="alt-1"></span>
+									<span class="transp">im letzten Monat</span>
+								</div>
+							</div>
+
+							<div class="wrapper-inner" style="height: 50%">
+								<h3 class="top-pad headline-03 white mt-2">Neueste Daten</h3>
+								<div class="dataset mt-2" id="newest0"></div>
+								<div class="dataset" id="newest1"></div>
+								<div class="dataset" id="newest2"></div>
+								<div class="dataset" id="newest3"></div>
+								<div class="dataset" id="newest4"></div>
+							</div>
+						</div>
+					 
+					 <div class="b content">
+						<h3 class="headline-03 white">Häufigste Tags</h3>
+					   <div class="chart-container">
+						<canvas id="tagCanvas"></canvas>
+					  </div>
+					  </div>
+				
+					  <div class="c content">
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Top-Bereitsteller</h3>
+						<div class="chart-container">
+						<canvas id="chartOne"></canvas>
+					  </div>
+					  </div>
+					  
+					  <div class="d content headline-03 white">
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Kategorien</h3>
+						<div class="chart-container">
+						<canvas id="chartTwo" style="transform: translateX(-8px) translateY(-15px);"> </canvas>
+					  </div>
+					  </div>
+					  
+					  <div class="e content"> 
+						<h3 class="headline-03 white" style="margin-bottom: 2rem;">Update-Aktivität</h3>
+						<div class="chart-container activity">
+						<canvas id="activity"> </canvas>
+					  </div>
+					  </div>
+					 
+				
+					 </div>
+				   </div>
+				  </div>
+				   
+
 				
 			</div>
 		</div>
@@ -289,25 +411,32 @@
 					Hier sind einige Beispiele aus Berlin:</h4>
 
 				<div class="projects-wrapper">
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-02"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="http://kita-suche.berlin/">Kita-Suche <br> in Berlin</a></span>
 								<span class="project-desc-author white">Das Berliner Kita-Angebot in einer interaktiven Suche mit Filter und Routing-Funktion</span>
 							</div>
 						</div>
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-01"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="https://offenerhaushalt.de/">Offener Haushalt</a></span>
-								<span class="project-desc-author white">Haushaltsdaten von Bund, Ländern und Kommunen dynamisch explorieren</span>
+								<span class="project-desc-title"><a class="cross-link" href="https://lab.technologiestiftung-berlin.de/projects/bikerides/index.html">Fahrrad- <br> Zählstellen</a></span>
+								<span class="project-desc-author white">Wie sieht der Radverkehr in Berlin täglich, wöchentlich und monatlich aus?</span>
 							</div>
 						</div>
-						<div class="project mr-3">
+						<div class="project">
 							<div class="project-image proj-03"></div>
 							<div class="project-desc-wrapper">
-								<span class="project-desc-title"><a class="cross-link" href="https://www.technologiestiftung-berlin.de/de/projekte/projekt/minecraft/">Berlin in Minecraft</a></span>
+								<span class="project-desc-title"><a class="cross-link" href="https://www.technologiestiftung-berlin.de/de/projekte/projekt/minecraft/">Berlin in <br> Minecraft</a></span>
 								<span class="project-desc-author white">Die Berliner Stadtmitte Block für Block entdecken und spielerisch neu gestalten</span>
+							</div>
+						</div>
+						<div class="project">
+							<div class="project-image proj-04"></div>
+							<div class="project-desc-wrapper">
+								<span class="project-desc-title"><a class="cross-link" href="http://badegewaesser-berlin.de/">Berliner <br> Badestellen</a></span>
+								<span class="project-desc-author white">Die Standorte sowie Wasserqualität der Berliner Badegewässer schnell prüfen</span>
 							</div>
 						</div>
 					</div>
@@ -348,6 +477,14 @@
 							<span>Victoria Dykes</span>
 							<span>Dykes@technologiestiftung-berlin.de</span>
 							<span>030 209 69 99 41</span>
+						</div>
+					</div>
+
+					<div class="profile-wrapper mt-2">
+						<div class="profile-image-3"></div>
+						<div class="profile-desc-wrapper">
+							<span>Alexandra Kapp</span>
+							<span>Kapp@technologiestiftung-berlin.de</span>
 						</div>
 					</div>
 		
